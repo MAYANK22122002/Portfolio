@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mayank Tiwari | Backend Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8; /* Light blue for links/buttons */
+            --border: #334155;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Header / Hero */
+        header {
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .bio {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin-right: 20px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover { color: var(--accent); }
+
+        /* Section Styling */
+        section { padding: 50px 0; }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        /* Projects Grid */
+        .project-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: transform 0.2s;
+        }
+
+        .project-card:hover { transform: translateY(-5px); }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-title { font-size: 1.5rem; font-weight: 700; color: #fff; }
+
+        .badge-winner {
+            background-color: rgba(255, 215, 0, 0.15);
+            color: #ffd700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .tech-stack { margin: 15px 0; }
+
+        .tech-tag {
+            display: inline-block;
+            background-color: #334155;
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .project-links a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: var(--accent); /* Blue button */
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-right: 10px;
+            transition: opacity 0.3s;
+        }
+
+        .project-links a.secondary {
+            background-color: transparent;
+            border: 1px solid var(--text-muted);
+            color: var(--text-muted);
+        }
+
+        .project-links a:hover { opacity: 0.9; }
+        .project-links i { margin-right: 8px; }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skill-category h3 { color: var(--accent); margin-bottom: 10px; }
+        .skill-list { list-style: none; }
+        .skill-list li {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+        }
+        .skill-list li::before {
+            content: "▹";
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Mobile Tweaks */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .project-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Mayank Tiwari</h1>
+        <div class="subtitle">Full Stack Developer & Hackathon Winner</div>
+        <p class="bio">
+            Computer Science Engineer with a strong background in <strong>Java, C++, and Data Structures</strong>.
+            I specialize in building scalable backend systems using <strong>Spring Boot</strong> and <strong>Docker</strong>.
+            Passionate about solving complex deployment challenges and automating workflows.
+        </p>
+
+        <div class="social-links">
+            <a href="mailto:tiwarimayank855@gmail.com" title="Email Me"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/MAYANK22122002" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/mayank-tiwari-b30656286" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </header>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">Audience Query Management System</div>
+                <span class="badge-winner">🏆 5th Place - RapidQuest Hackathon</span>
+            </div>
+            <p style="color: #cbd5e1; margin-bottom: 15px;">
+                A full-stack automated support agent that ingests live emails, uses Gemini AI for single-shot analysis (Category/Priority/Draft), and sends auto-replies via SendGrid.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-tag">Java Spring Boot</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Gemini AI API</span>
+                <span class="tech-tag">SendGrid API</span>
+            </div>
+            <div class="project-links">
+                <a href="https://querysystem.onrender.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                <a href="https://github.com/MAYANK22122002/QuerySystem" target="_blank" class="secondary"><i class="fab fa-github"></i> View Code</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">Online Election System</div>
+            </div>
+            <p style="color: #cbd5e1; margin-bottom: 15px;">
+                A secure digital voting system with separate admin and voter roles. Designed to ensure integrity and ease of use for digital elections.
+            </p>
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Tkinter GUI</span>
+                <span class="tech-tag">MySQL</span>
+            </div>
+            <div class="project-links">
+                <a href="#" class="secondary"><i class="fab fa-github"></i> View Code</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-header">
+                <div class="project-title">Wearable AI Assistant</div>
+                <span class="badge-winner">📄 Published IEEE Paper</span>
+            </div>
+            <p style="color: #cbd5e1; margin-bottom: 15px;">
+                Voice/text virtual assistant integrated into smartwatches. Presented research at ICCPCT‑23 (IEEE Kerala Section).
+            </p>
+            <div class="tech-stack">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Wearable OS</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <ul class="skill-list">
+                    <li>Java (Strong Command)</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>JavaScript (ES6+)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Backend & Tools</h3>
+                <ul class="skill-list">
+                    <li>Spring Boot 3</li>
+                    <li>Docker & Containers</li>
+                    <li>PostgreSQL</li>
+                    <li>Git / GitHub</li>
+                    <li>Render (Deployment)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Core Concepts</h3>
+                <ul class="skill-list">
+                    <li>Data Structures & Algorithms</li>
+                    <li>RESTful APIs</li>
+                    <li>System Architecture</li>
+                    <li>Object-Oriented Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Designed & Built by Mayank Tiwari using HTML/CSS.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
