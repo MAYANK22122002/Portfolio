@@ -108,6 +108,16 @@
             font-weight: 600;
             border: 1px solid rgba(255, 215, 0, 0.3);
         }
+        
+        .badge-new {
+            background-color: rgba(56, 189, 248, 0.15);
+            color: #38bdf8;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
 
         .tech-stack { margin: 15px 0; }
         
@@ -206,6 +216,27 @@
 
             <div class="project-card">
                 <div class="project-header">
+                    <div class="project-title">Industrial IoT Ingestion Service</div>
+                    <span class="badge-new">🚀 High Performance API</span>
+                </div>
+                <p style="color: #cbd5e1; margin-bottom: 15px;">
+                    Engineered a high-throughput REST API using Spring Boot 3.4 to ingest 1,000+ sensor events/second with sub-400ms latency. 
+                    Optimized database performance by implementing SQL Batch Processing and HashMap caching (O(1)), eliminating the N+1 select problem.
+                    Ensured data integrity for financial-grade auditing by implementing strict validation logic and ACID transactions.
+                </p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Java Spring Boot 3.4</span>
+                    <span class="tech-tag">H2 Database</span>
+                    <span class="tech-tag">Spring Data JPA</span>
+                    <span class="tech-tag">REST API</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/MAYANK22122002/Industrial-IoT-Ingestion-Service" target="_blank" class="secondary"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
                     <div class="project-title">Audience Query Management System</div>
                     <span class="badge-winner">🏆 5th Place - RapidQuest Hackathon</span>
                 </div>
@@ -227,29 +258,12 @@
 
             <div class="project-card">
                 <div class="project-header">
-                    <div class="project-title">Online Election System</div>
-                </div>
-                <p style="color: #cbd5e1; margin-bottom: 15px;">
-                    A secure digital voting system with separate admin and voter roles. Designed to ensure integrity and ease of use for digital elections.
-                </p>
-                <div class="tech-stack">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Tkinter GUI</span>
-                    <span class="tech-tag">MySQL</span>
-                </div>
-                <div class="project-links">
-                    <a href="https://github.com/MAYANK22122002/Online-Voting-System.git" target="_blank" class="secondary"><i class="fab fa-github"></i> View Code</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">
                     <div class="project-title">Inbuilt Chat GPT feature in Smartwatches</div>
                     <span class="badge-winner">📄 Published IEEE Paper</span>
                 </div>
                 <p style="color: #cbd5e1; margin-bottom: 15px;">
                    Engineered a voice-activated virtual assistant for smartwatches using Python and NLP. Designed hands-free workflows for setting reminders and querying information on-the-go. 
-                The research behind this novel wearable UX was published and presented at the ICCPCT-23 conference (IEEE Kerala Section).
+                   The research behind this novel wearable UX was published and presented at the ICCPCT-23 conference (IEEE Kerala Section).
                 </p>
                 <div class="tech-stack">
                     <span class="tech-tag">Python</span>
@@ -282,6 +296,7 @@
                         <li>Spring Boot 3</li>
                         <li>Docker & Containers</li>
                         <li>PostgreSQL</li>
+                        <li>H2 Database</li>
                         <li>Git / GitHub</li>
                         <li>Render (Deployment)</li>
                     </ul>
@@ -306,6 +321,3 @@
 
 </body>
 </html>
-
-
-
